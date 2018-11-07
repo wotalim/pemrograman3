@@ -70,9 +70,9 @@ class Export_pegawai_excel extends CI_Controller {
 
 
         $objDrawing = new PHPExcel_Worksheet_Drawing();
-        $objDrawing->setName('cms');
-        $objDrawing->setDescription('cms');
-        $logo = 'assets/img/cms.png'; // Provide path to your logo file
+        $objDrawing->setName('wibu');
+        $objDrawing->setDescription('wibu');
+        $logo = 'assets/img/wibu.png'; // Provide path to your logo file
         $objDrawing->setPath($logo);  //setOffsetY has no effect
         $objDrawing->setCoordinates('A1');
         $objDrawing->setHeight(50); // logo height
