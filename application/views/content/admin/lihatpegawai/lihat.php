@@ -4,7 +4,14 @@
 				<li><a href="#">
 					<em class="fa fa-user-circle-o"></em>
 				</a></li>
-				<li class="active">Profil</li>
+        <li>
+        <a href="<?php echo site_url('lihat_pegawai/')?>">&nbsp;Lihat Pegawai</a> 
+          </li>
+				<li class="active">
+
+          Profil
+
+        </li>
 			</ol>
 		</div><!--/.row-->
     <br>
