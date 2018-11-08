@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2018 at 03:06 PM
+-- Generation Time: Nov 08, 2018 at 04:48 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -163,10 +163,10 @@ CREATE TABLE `karyawan` (
 --
 
 INSERT INTO `karyawan` (`nip`, `nama_depan`, `nama_belakang`, `jk`, `tempat_lahir`, `tgl_lahir`, `alamat_karyawan`, `telp`, `foto`, `email`, `password`, `id_jabatan`, `role`, `absen_terakhir`) VALUES
-(1001, 'Septian', 'Djamari Chaniaco', 'Laki-Laki', 'Jogja', '1989-04-12', 'Jogjakarta', '081220428005', 'Abdullahs.jpeg', 'coba@yahoo.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, '2018-10-07'),
+(1001, 'Ghofar', 'Admin', 'Laki-Laki', 'Jogja', '1989-04-12', 'Jogjakarta', '081220428005', 'Abdullahs.jpeg', 'coba@yahoo.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, '2018-10-07'),
 (1002, 'Susi', 'Susanti', 'Perempuan', 'Malang', '1965-06-06', 'Depan rumah', '0855555554', 'Susi Susanti.jpg', 'susi@yahoo.com', '7fa8282ad93047a4d6fe6111c93b308a', 4, 0, '2018-10-09'),
 (1003, 'Udin', 'Shihabuddin', 'Laki-Laki', 'Bandung', '1985-06-02', 'Bandung', '0855555555', 'Udin.jpeg', 'cheppy_sahari@yahoo.com', 'fcea920f7412b5da7be0cf42b8c93759', 5, 0, '2018-10-09'),
-(1004, 'Mochammad', 'Ghofarru', 'Laki-Laki', 'Malang', '1990-02-21', 'Jl. Demak, Dampit City', '081220428005', '', 'muach@gmail.com', '', 1, 0, '0000-00-00'),
+(1004, 'Mochammad', 'Ghofarru', 'Laki-Laki', 'Malang', '1990-02-21', 'Jl. Demak, Dampit City', '081220428005', '', 'muach@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', 1, 0, '0000-00-00'),
 (1005, 'budi', 'doremi', 'Laki-Laki', 'rumah sakit', '2018-11-07', 'jl raya', '14022', '', 'doremi@gmail.com', '', 3, 0, '0000-00-00');
 
 -- --------------------------------------------------------
