@@ -106,10 +106,10 @@
                     </div>
                     <div class="row modal-body">
                         <div class="col-md-6 col-lg-6 col-sm-6">
-                            <button onclick="location.href='<?php echo site_url('export_pegawai_pdf/index')?>'" type="button" style="font-size: 64px;" class="btn btn-danger pull-left">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp;</button>
+                            <button onclick="location.href='<?php echo site_url('export_absensi_pdf/index')?>'" type="button" style="font-size: 64px;" class="btn btn-danger pull-left">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp;</button>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
-                            <button onclick="location.href='<?php echo site_url('export_pegawai_excel/export')?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
+                            <button onclick="location.href='<?php echo site_url('export_absensi_excel/export')?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
                         </div>
                     </div>
                 </div>        
