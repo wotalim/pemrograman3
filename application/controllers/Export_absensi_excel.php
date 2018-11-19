@@ -21,7 +21,8 @@ class Export_absensi_excel extends CI_Controller {
 		require_once APPPATH.'third_party/PHPExcel.php';
 
 		// Panggil class PHPExcel nya
-		$ambildata = $this->export_absensi_excel_model->export_absensi();
+        $nip = $this->uri->segment(3);
+		$ambildata = $this->export_absensi_excel_model->export_absensi(1002);
 
 
         if(count($ambildata)>0){
