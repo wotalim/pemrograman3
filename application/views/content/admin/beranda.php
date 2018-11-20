@@ -36,19 +36,19 @@
 						<?php  
 						foreach($lihatevent->result() as $row){
 							$mulai = strtotime($row->start_date);
-							$selesai = strtotime($row->end_date);
+							$selesai = strtotime("-1 day", strtotime($row->end_date));
 							$tanggal_mulai = date('d', $mulai);
 							$tanggal_selesai = date('d', $selesai);
 							if ($row->end_date == ""){ ?>
 							<tr class="row">
-								<td class="col-sm-4 col-md-4 col-lg-4 text-center"><span class="pull-left"><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span><b><?php echo $tanggal_mulai;?></b></td>
+								<td class="col-sm-4 col-md-4 col-lg-4 text-center"><span class="pull-left"><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span><b><?php echo $tanggal_mulai?></b></td>
 								<td class="col-sm-8 col-md-8 col-lg-8 text-center"><?php echo $row->title;?></td>
 								<td class="col-sm-1 col-md-1 col-lg-1"><span><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span></td>
 							</tr>
 							<?php
 							}elseif($row->end_date != ""){?>
 							<tr class="row">
-								<td class="col-sm-4 col-md-4 col-lg-4 text-center"><span class="pull-left"><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span><b><?php echo $tanggal_mulai;?> - <?php echo ($tanggal_selesai-1);?></b></td>
+								<td class="col-sm-4 col-md-4 col-lg-4 text-center"><span class="pull-left"><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span><b><?php echo $tanggal_mulai;?> - <?php echo ($tanggal_selesai)?></b></td>
 								<td class="col-sm-8 col-md-8 col-lg-8 text-center"><?php echo $row->title;?></td>
 								<td class="col-sm-1 col-md-1 col-lg-1"><span><i class="fa fa-circle" style="color: <?php echo $row->color;?>;"></i></span></td>
 							</tr>
@@ -57,7 +57,7 @@
 						}?>
 						</table>
 						<br>
-						<span class="pull-right"><a href="<?php echo site_url('admin/kalender_lainnya')?>" type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Lihat Lainnya</a></span>
+						<span class="pull-right"><a href="<?php echo site_url('admin/lihat_edit_kalender')?>" type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Lihat Lainnya</a></span>
 					</div>
 				</div>
 			</div>	

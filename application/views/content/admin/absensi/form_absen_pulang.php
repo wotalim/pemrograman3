@@ -51,8 +51,8 @@
             </table>
             <div class="form-group" align="center">
                 <div class="input-group clockpicker">
-                 <input class="form-control" type="text" id="pulang" name="pulang" value="16:00">
-                 <span class="input-group-addon" id="jam"><i class="fa fa-clock-o"></i></span>
+                    <input class="form-control" type="text" id="pulang" name="pulang" value="<?php echo date('H:i')?>">
+                    <span class="input-group-addon" id="jam"><i class="fa fa-clock-o"></i></span>
                 </div>
             </div>
             <div><br><br>
@@ -71,6 +71,8 @@
 <script src="<?php echo base_url()?>assets/clockpicker/dist/bootstrap-clockpicker.js"></script>
 <script type="text/javascript">
     $('.clockpicker').clockpicker({
-        autoclose : true
+        placement: 'top',
+        align: 'left',
+        donetext: 'SELESAI'
     });
 </script>

@@ -12,7 +12,7 @@ class Pegawai extends CI_Controller{
         $data['title'] = "Selamat Datang, " .$this->session->userdata('nama_depan'). " !!";
         $this->load->view('header', $data);
         $this->load->view('sidebar');
-        $this->load->view('content/pegawai/beranda_pegawai');
+        $this->load->view('content/pegawai/content_pegawai');
         $this->load->view('footer');   
     }
     

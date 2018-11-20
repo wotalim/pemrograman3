@@ -59,7 +59,7 @@
             </table>
             <div class="form-group" align="center">
                 <div class="input-group clockpicker">
-                 <input class="form-control" type="text" id="datang" name="datang" value="08:00" style="pointer-events: none;">
+                 <input class="form-control" type="text" id="datang" name="datang" value="<?php echo date('H:i')?>" style="pointer-events: none;">
                  <span class="input-group-addon" id="jam" style="pointer-events: none;"><i class="fa fa-clock-o"></i></span>
                 </div>
             </div>
@@ -94,7 +94,9 @@
 <script src="<?php echo base_url()?>assets/clockpicker/dist/bootstrap-clockpicker.js"></script>
 <script type="text/javascript">
     $('.clockpicker').clockpicker({
-        autoclose : true
+        placement: 'top',
+        align: 'left',
+        donetext: 'SELESAI'
     });
 </script>
 <script>
@@ -107,7 +109,7 @@ $(function(){
             $("#jam").removeAttr("style");
             $("#datang").removeAttr("style");
             $("#keterangan").val("Hadir").attr('style', 'pointer-events: none; width: 100%;');
-            document.getElementById("datang").value = "08:00";
+            document.getElementById("datang").value = "<?php echo date('H:i')?>";
             $("#datang").focus(); 
         }
         else if($("#izin").is(":checked")){

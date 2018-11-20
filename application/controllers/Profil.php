@@ -8,11 +8,16 @@ class Profil extends CI_Controller{
     }
 
     function index(){
+        if ($this->session->userdata('role')==='1'){
+            
             $data['title'] = "Profil";
             $this->load->view('header', $data);
             $this->load->view('sidebar');
             $this->load->view('content/lihat_profil', array());
             $this->load->view('footer');
+        }else{
+            echo "Akses Ditolak!!";
+        }
     }
 }
 ?>

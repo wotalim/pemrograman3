@@ -41,7 +41,7 @@
                 <?php echo "Tanggal Absen: <b>".$row->tgl_absensi."</b>"?><br><br>
                 <?php echo "<b>".$row->kehadiran."</b> Absen Pada Jam: <b>".$row->datang."</b>";?><br><br>
                 <?php echo "Telat Selama <b>".$row->telat."</b> Menit"?><br><br>
-                <?php echo "<b>Pulang</b> Pada Jam:".$row->pulang?><br><br>
+                <?php echo "<b>Pulang</b> Pada Jam:<b>".$row->pulang?></b><br><br>
                 <?php echo "Sesi Kerja: <b>".$sesiKerja->h."</b> Jam Dan <b>".$sesiKerja->i."</b> Menit"?>
             </div>
             

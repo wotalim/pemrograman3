@@ -4,9 +4,7 @@
 				<li><a href="#">
 					<em class="fa fa-user"></em>
 				</a></li>
-            <li>
-                <a href="<?php echo site_url('lihat_pegawai/')?>">&nbsp;Lihat Pegawai&nbsp;</a>
-            </li>
+				<li>Lihat Pegawai</li>
                 <li class="active">Tambah Pegawai</li>
 			</ol>
 		</div><!--/.row--><br><br><!--/.row-->

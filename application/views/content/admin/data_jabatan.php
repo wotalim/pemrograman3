@@ -8,7 +8,6 @@
 			</ol>
 		</div><!--/.row-->
         <br>
-
         <div class="row">
 			<div  class="col-sm-12">
 				<div class="panel panel-info">
@@ -22,12 +21,12 @@
                     <div class="col-lg-10 col-md-12 col-sm-12">
                         <input type="hidden" name="id_jabatan">
                         <div class="form-group">
-                            <label for="text">Nama Jabatan&nbsp;:</label>
-                            <input type="text" class="form-control" id="text" name="nama_jabatan">
+                            <label for="email">Nama Jabatan&nbsp;:</label>
+                            <input type="text" class="form-control" id="email" name="nama_jabatan">
                         </div>
                         <div class="form-group">
-                            <label for="text">Gaji Pokok&nbsp;:</label>
-                            <input type="number" class="form-control" id="text" name="gapok">
+                            <label for="pwd">Gaji Pokok&nbsp;:</label>
+                            <input type="number" class="form-control" id="pwd" name="gapok">
                             <input type="hidden" name="tgl_ganti" value="<?php echo date("Y/m/d");?>">
                             <br>
                         </div>

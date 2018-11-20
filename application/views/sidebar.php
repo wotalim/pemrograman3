@@ -35,7 +35,6 @@
 			<li><a href="<?php echo site_url('login/logout');?>"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
 		
 		<?php else:?>
-			<li class="<?php echo active_link('pegawai'); ?>"><a href='<?php echo site_url('pegawai')?>'><em class='fa fa-home'>&nbsp;</em> Home</a></li>
 			<li><a href='<?php echo site_url('profil')?>'><em class='fa fa-user-circle-o'>&nbsp;</em> Profil</a></li>
 			<li><a href="<?php echo site_url('login/logout');?>"><em class="fa fa-sign-out">&nbsp;</em> Logout</a></li>
 		<?php endif 
