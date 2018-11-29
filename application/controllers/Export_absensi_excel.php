@@ -22,7 +22,7 @@ class Export_absensi_excel extends CI_Controller {
 
 		// Panggil class PHPExcel nya
         $nip = $this->uri->segment(3);
-		$ambildata = $this->export_absensi_excel_model->export_absensi(1002);
+		$ambildata = $this->export_absensi_excel_model->export_absensi($nip);
 
 
         if(count($ambildata)>0){
@@ -83,9 +83,11 @@ class Export_absensi_excel extends CI_Controller {
         $objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
 
 
-                $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1', "DAFTAR ABSENSI"); 
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1', "DAFTAR ABSENSI");
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A2', "ID Karyawan :".$nip); 
 
-        $objPHPExcel->getActiveSheet()->mergeCells('A1:F1'); // Set Merge Cell pada kolom A1 sampai E1
+        $objPHPExcel->getActiveSheet()->mergeCells('A1:F1'); // Set Merge Cell pada kolom A1 sampai F2
+        $objPHPExcel->getActiveSheet()->mergeCells('A2:F2'); // Set Merge Cell pada kolom B2 sampai F2
         $objPHPExcel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE); // Set bold kolom A1
         $objPHPExcel->getActiveSheet()->getStyle('A1')->getFont()->setSize(20); // Set font size 15 untuk kolom A1
         $objPHPExcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
@@ -117,12 +119,12 @@ class Export_absensi_excel extends CI_Controller {
                 $objset->setCellValue($cols[$a].'4', $val[$a]);
                  
                 //Setting lebar cell
-                $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(6); 
-                $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(25); 
-                $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(15);
-                $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(13);
-                $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(12);
-                $objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth(13);
+                $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(12); 
+                $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(10); 
+                $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(10);
+                $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(9);
+                $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(10);
+                $objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth(10);
              
                 $style = array(
                     'alignment' => array(
@@ -130,6 +132,7 @@ class Export_absensi_excel extends CI_Controller {
                     )
                 );
                 $objPHPExcel->getActiveSheet()->getStyle($cols[$a].'4')->applyFromArray($style);
+                $objPHPExcel->getDefaultStyle()->applyFromArray($style);
             }
              
             $baris  = 5;

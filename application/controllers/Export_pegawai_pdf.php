@@ -13,7 +13,7 @@ Class Export_pegawai_pdf extends CI_Controller{
         // setting jenis font yang akan digunakan
         $pdf->SetFont('Arial','B',16);
         $image="wibu.png";
-        $pdf->Image('assets/img/'.$image,10,5,-300);
+        $pdf->Image('assets/img/'.$image,10,5,-900);
         // mencetak string 
         $pdf->Cell(190,7,'DAFTAR NAMA KARYAWAN',0,1,'C');
         $pdf->SetFont('Arial','B',12);

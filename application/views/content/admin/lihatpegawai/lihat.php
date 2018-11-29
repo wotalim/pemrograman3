@@ -1,23 +1,24 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-		<div class="row">
-			<ol class="breadcrumb">
-				<li><a href="#">
-					<em class="fa fa-user-circle-o"></em>
-				</a></li>
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="#">
+          <em class="fa fa-user-circle-o"></em>
+        </a></li>
         <li>
         <a href="<?php echo site_url('lihat_pegawai/')?>">&nbsp;Lihat Pegawai</a> 
           </li>
-				<li class="active">
+        <li class="active">
 
           Profil
 
         </li>
-			</ol>
-		</div><!--/.row-->
+      </ol>
+    </div><!--/.row-->
     <br>
     <div>
           
           <?php foreach ($query->result() as $row) { ?>
+
 
           <div class="panel panel-info">
             <div class="panel-heading pan-bar">
@@ -109,7 +110,7 @@
                             <button onclick="location.href='<?php echo site_url('export_absensi_pdf/index')?>'" type="button" style="font-size: 64px;" class="btn btn-danger pull-left">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp;</button>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
-                            <button onclick="location.href='<?php echo site_url('export_absensi_excel/export')?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
+                            <button onclick="location.href='<?php echo site_url('export_absensi_excel/export/'.$query->result()[0]->nip)?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
                         </div>
                     </div>
                 </div>        

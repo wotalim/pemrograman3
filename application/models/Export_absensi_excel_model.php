@@ -7,6 +7,8 @@ class Export_absensi_excel_model extends CI_Model{
         $this->db->from('absensi');
         $this->db->where('nip', $nip);
         $query = $this->db->get();
+
+ //       return $query;
          
         if($query->num_rows() > 0){
             foreach($query->result() as $data){
