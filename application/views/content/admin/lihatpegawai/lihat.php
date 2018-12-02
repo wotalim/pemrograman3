@@ -15,9 +15,10 @@
       </ol>
     </div><!--/.row-->
     <br>
-    <div>
+    <div class="row">
+      <div class="col-sm-12">
           
-          <?php foreach ($query->result() as $row) { ?>
+          <?php  foreach ($query->result() as $row) { ?>
 
 
           <div class="panel panel-info">
@@ -28,7 +29,7 @@
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="<?php echo base_url("");?>/assets/img/foto_profil/<?php echo $row->foto?>" class="img-kotak img-rounded img-responsive"> </div>
 
-                <?php }?>
+              
                 
           <div class="col-md-9">
                 
@@ -61,6 +62,7 @@
                     </tbody>
                   </table>
 
+<?php }?>
 
 
         <div class="col-sm-3 main">
@@ -72,6 +74,9 @@
         <div class="col-sm-3 main">
             <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target=".export_absensi_modal"> <i class="glyphicon glyphicon-download-alt"></i>&nbsp;Export Absensi</button>
         </div>
+      </div>
+    </div>
+  </div>
 
 
 <script src="<?php echo base_url()?>assets/js/jquery-3.3.1.min.js"></script>
@@ -98,6 +103,8 @@
             </div>
         </div>
 
+      </div>
+
         <!-- Modal Absensi-->
         <div class="modal fade export_absensi_modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog modal-sm" role="document">
@@ -116,3 +123,13 @@
                 </div>        
             </div>
         </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading pan-bar">
+        <div class="panel-title">Absensi </div>     
+      </div>
+
+      <div class="panel-body">
+            sek hurung
+      </div>
+    </div>
