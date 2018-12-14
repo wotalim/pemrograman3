@@ -9,9 +9,21 @@
 		</div><!--/.row-->
         <!--Content Brow-->
 
+<div class="panel panel-default">
+					<div class="panel-heading">
+						Calendar
+						
+						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+					<div class="panel-body">
+						<div id="calendar">
+							
+						</div>
+					</div>
+				</div>
 
 </div>
         
 
 <script src="<?php echo base_url()?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.js"></script>

@@ -13,8 +13,8 @@
 	<div class="row">
         <div class="col-sm-12">
 				<div class="panel panel-info">
-					<div class="panel-heading clickable">Tunjangan
-                        <span class="pull-right"><i class="glyphicon glyphicon-minus"></i></span>
+					<div class="panel-heading">Tunjangan
+                        <span class="pull-right clickable panel-toggle "><em class="fa fa-toggle-up"></em></span>
                     </div>
 					<div class="panel-body" align="center">
                     <form class="form-inline" action="<?php echo base_url('index.php/lembur_tunjangan/simpan');?>" method="POST">
@@ -36,6 +36,9 @@
 			</div>
 		</div>
         <div class="col-sm-12 table-responsive">
+        <div class="panel panel-info">
+        <div class="panel-body">
+        <div class="table-responsive">
         <table class="table table-bordered table-hover">
   <thead class="thead-light">
     <tr>
@@ -53,8 +56,8 @@
                 <td><?php echo $nomer; ?></td>
                 <td><?php echo $row->nama_jenis_tunjangan ; ?></td>
                 <td>Rp. <?php echo number_format($row->besar_tunjangan,2,",",".") ; ?></td>
-                <td class="text-center"><a href="<?php echo site_url('lembur_tunjangan/edit/').$row->id_jenis_tunjangan ;?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i>&nbsp;Edit</a>&nbsp;
-                <a href="<?php echo site_url('lembur_tunjangan/hapus/').$row->id_jenis_tunjangan;?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>&nbsp;Hapus</a></td>
+                <td class="text-center"><a href="<?php echo site_url('lembur_tunjangan/edit/').$row->id_jenis_tunjangan ;?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>&nbsp;
+                <a href="<?php echo site_url('lembur_tunjangan/hapus/').$row->id_jenis_tunjangan;?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
             </tr>
             <?php $nomer++;
         }
@@ -66,9 +69,11 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 
 
 <script src="<?php echo base_url()?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.js"></script>
-<script src="<?php echo base_url()?>assets/js/panel_click.js"></script>

@@ -8,6 +8,12 @@
 			</ol>
 		</div><!--/.row-->
     <br>
+    <div class="panel panel-info">
+      <div class="panel-heading pan-bar">
+        <div class="panel-title"> DAFTAR KARYAWAN</div>     
+      </div>
+
+      <div class="panel-body">
     <div>
     <form action="<?php echo site_url('lihat_pegawai/index/'); ?>" method="post" class="form-inline">
     <div class="row">
@@ -61,8 +67,8 @@
 							<td><?php echo $row['alamat_karyawan']; ?></td>
                             <td><?php echo $row['telp']; ?></td>
                             <td><?php echo $row['email']; ?></td>
-                            <td><a href="<?php echo site_url('lihat_pegawai/edit/').$row['nip'];?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i>&nbsp;Edit</a>&nbsp;
-                            <a href="<?php echo site_url('lihat_pegawai/hapus/').$row['nip'];?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>&nbsp;Hapus</a></td>
+                            <td><a href="<?php echo site_url('lihat_pegawai/edit/').$row['nip'];?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>&nbsp;
+                            <a href="<?php echo site_url('lihat_pegawai/hapus/').$row['nip'];?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
 						</tr>
 				    <?php
                     }?>
@@ -99,6 +105,8 @@
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                             <button onclick="location.href='<?php echo site_url('export_pegawai_excel/export')?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>        
