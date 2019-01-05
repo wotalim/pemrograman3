@@ -114,7 +114,7 @@
                     </div>
                     <div class="row modal-body">
                         <div class="col-md-6 col-lg-6 col-sm-6">
-                            <button onclick="location.href='<?php echo site_url('export_absensi_pdf/index')?>'" type="button" style="font-size: 64px;" class="btn btn-danger pull-left">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp;</button>
+                            <button onclick="location.href='<?php echo site_url('export_absensi_pdf/index/'.$query->result()[0]->nip)?>'" type="button" style="font-size: 64px;" class="btn btn-danger pull-left">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp;</button>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                             <button onclick="location.href='<?php echo site_url('export_absensi_excel/export/'.$query->result()[0]->nip)?>'" type="button" style="font-size: 64px;" class="btn btn-success pull-right">&nbsp;<i class="fa fa-file-excel-o"></i>&nbsp;</button>
@@ -130,6 +130,33 @@
       </div>
 
       <div class="panel-body">
-            sek hurung
+            <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th class="text-center">Tanggal</th>
+                <th class="text-center">Datang</th>
+                <th class="text-center">Pulang</th>
+                <th class="text-center">Terlambat</th>
+                <th class="text-center">Kehadiran</th>
+                <th class="text-center">Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        
+        foreach($query->result() as $row){?>
+            <tr>
+                <td class="text-center"><?php echo $tgl_absensi; ?></td>
+                <td><?php echo $row->datang ; ?></td>
+                <td class="text-center"><?php echo $row->pulang ; ?></td>
+                <td class="text-center"><?php echo $row->tgl_ganti; ?></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+        <?php
+        }
+        ?>  
+        </tbody>
+      </table>
       </div>
     </div>

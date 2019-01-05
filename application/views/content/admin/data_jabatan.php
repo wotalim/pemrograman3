@@ -21,12 +21,12 @@
                     <div class="col-lg-10 col-md-12 col-sm-12">
                         <input type="hidden" name="id_jabatan">
                         <div class="form-group">
-                            <label for="email">Nama Jabatan&nbsp;:</label>
+                            <label for="jabatan">Nama Jabatan&nbsp;:</label>
                             <input type="text" class="form-control" id="email" name="nama_jabatan">
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Gaji Pokok&nbsp;:</label>
-                            <input type="number" class="form-control" id="pwd" name="gapok">
+                            <label for="gapok">Gaji Pokok&nbsp;:</label>
+                            <input type="number" class="form-control" id="gapok" name="gapok">
                             <input type="hidden" name="tgl_ganti" value="<?php echo date("Y/m/d");?>">
                             <br>
                         </div>
@@ -46,10 +46,10 @@
         <table class="table table-bordered table-hover">
         <thead class="thead-light">
             <tr>
-                <th>Nomor</th>
-                <th>Nama Jabatan</th>
-                <th>Gaji Pokok</th>
-                <th>Tgl_Ganti</th>
+                <th class="text-center">Nomor</th>
+                <th class="text-center">Nama Jabatan</th>
+                <th class="text-center">Gaji Pokok</th>
+                <th class="text-center">Tgl_Ganti</th>
                 <th class="text-center" colspan="2">Aksi</th>
             </tr>
         </thead>
@@ -58,10 +58,10 @@
         $nomer = 1;
         foreach($query->result() as $row){?>
             <tr>
-                <td><?php echo $nomer; ?></td>
+                <td class="text-center"><?php echo $nomer; ?></td>
                 <td><?php echo $row->nama_jabatan ; ?></td>
-                <td>Rp. <?php echo number_format($row->gapok,2,",",".") ; ?></td>
-                <td><?php echo $row->tgl_ganti; ?></td>
+                <td class="text-center">Rp. <?php echo number_format($row->gapok,2,",",".") ; ?></td>
+                <td class="text-center"><?php echo $row->tgl_ganti; ?></td>
                 <td class="text-center" ><a href="<?php echo site_url('data_jabatan/edit/').$row->id_jabatan ;?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>&nbsp;
                 <a href="<?php echo site_url('data_jabatan/hapus/').$row->id_jabatan;?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
             </tr>

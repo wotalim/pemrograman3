@@ -22,8 +22,11 @@
         <div class="panel panel-default">
           <div class="panel-body tabs">
             <ul class="nav nav-pills">
-              <li><a href="#profil_saya" data-toggle="tab" ><em class='fa fa-user'>&nbsp;</em>Profil</a></li>
-              <li><a href="#edit_password" data-toggle="tab"><em class='fa fa-lock'>&nbsp;</em>Edit Password</a></li>
+              <li class="active">
+              <a href="#profil_saya" data-toggle="tab" ><em class='fa fa-user'>&nbsp;</em>Profil</a></li>
+              <li>
+                <a href="#edit_password" data-toggle="tab"><em class='fa fa-lock'>&nbsp;</em>Edit Password</a>
+              </li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade in active" id="profil_saya">

@@ -84,5 +84,7 @@ class Lihat_pegawai_model extends CI_Model {
 			echo "Akses Ditolak!!";
 		}
 	}
+
+	
 }
 ?>

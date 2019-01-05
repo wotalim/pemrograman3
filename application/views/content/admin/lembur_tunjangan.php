@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <label for="pwd">Besar Tunjangan&nbsp;:</label>
-                            <input type="text" class="form-control" id="pwd" name="besar_tunjangan">
+                            <input type="number" class="form-control" id="pwd" name="besar_tunjangan">
                             <input type="hidden" name="tgl_ganti" value="<?php date("Y/m/d");?>">
                         </div>
                         <div class="form-group">
@@ -42,9 +42,9 @@
         <table class="table table-bordered table-hover">
   <thead class="thead-light">
     <tr>
-      <th scope="col">Nomor</th>
-      <th scope="col">Nama Tunjangan</th>
-      <th scope="col">Besar Tunjangan</th>
+      <th class="text-center" scope="col">Nomor</th>
+      <th class="text-center" scope="col">Nama Tunjangan</th>
+      <th class="text-center" scope="col">Besar Tunjangan</th>
       <th class="text-center" colspan="2">Aksi</th>
     </tr>
   </thead>
@@ -53,9 +53,9 @@
         $nomer = 1;
         foreach($query->result() as $row){?>
             <tr>
-                <td><?php echo $nomer; ?></td>
+                <td class="text-center"><?php echo $nomer; ?></td>
                 <td><?php echo $row->nama_jenis_tunjangan ; ?></td>
-                <td>Rp. <?php echo number_format($row->besar_tunjangan,2,",",".") ; ?></td>
+                <td class="text-center" >Rp. <?php echo number_format($row->besar_tunjangan,2,",",".") ; ?></td>
                 <td class="text-center"><a href="<?php echo site_url('lembur_tunjangan/edit/').$row->id_jenis_tunjangan ;?>" type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>&nbsp;
                 <a href="<?php echo site_url('lembur_tunjangan/hapus/').$row->id_jenis_tunjangan;?>" onClick="return confirm('Hapus Data?')" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
             </tr>
